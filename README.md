@@ -4,7 +4,8 @@ of testcafe
 ### tag v1.18.5-custom
 
 TestCafe is updated with logging cdpPort value to file.
-TESTCAFE_CDPPORTS_FILE is an env variable to be used where cdp ports will be logged.
+`TESTCAFE_CDPPORTS_LOG_TO_FILE_NEEDED=true` - is a variable that toggles cdpPort logging feature on and off.
+`TESTCAFE_CDPPORTS_FILE=cdpPorts.txt` - is an env variable with a file path to be used where cdp ports will be logged.
 Otherwise these ports values will be logged into `cdpPorts.txt` file.
 
 ---
