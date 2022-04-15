@@ -1,3 +1,16 @@
+## pavlobu fork note:
+we need to update (rebase) this fork from time-to-time with latest master or stable release
+of testcafe
+### tag v1.18.5-custom
+
+TestCafe is updated with logging cdpPort value to file.
+TESTCAFE_CDPPORTS_FILE is an env variable to be used where cdp ports will be logged.
+Otherwise these ports values will be logged into `cdpPorts.txt` file.
+
+---
+---
+---
+
 <p align="center">
   <a href="https://testcafe.io/403442/resources/blog/2021-10-7-dashboard-alpha-invitation-announce?utm_source=github.com&utm_medium=referral&utm_campaign=tc-gh-banner">
     <img src="https://raw.github.com/DevExpress/testcafe/master/media/tda-banner.png" alt="Join TestCafe Dashboard “Alpha Test” Program" />
@@ -39,19 +52,27 @@
 
 ## Table of contents
 
-* [Features](#features)
-* [TestCafe Studio: IDE for End-to-End Web Testing](#testcafe-studio-ide-for-end-to-end-web-testing)
-* [Getting Started](#getting-started)
-* [Documentation](#documentation)
-* [Get Help](#get-help)
-* [Issue Tracker](#issue-tracker)
-* [Stay in Touch](#stay-in-touch)
-* [Contributing](#contributing)
-* [Plugins](#plugins)
-* [Different Versions of TestCafe](#different-versions-of-testcafe)
-* [Badge](#badge)
-* [License](#license)
-* [Creators](#creators)
+- [pavlobu fork note:](#pavlobu-fork-note)
+  - [tag v1.18.5-custom](#tag-v1185-custom)
+- [Table of contents](#table-of-contents)
+- [Features](#features)
+- [TestCafe Studio: IDE for End-to-End Web Testing](#testcafe-studio-ide-for-end-to-end-web-testing)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Creating the Test](#creating-the-test)
+  - [Running the Test](#running-the-test)
+  - [Viewing the Results](#viewing-the-results)
+- [Documentation](#documentation)
+- [Get Help](#get-help)
+- [Issue Tracker](#issue-tracker)
+- [Stay in Touch](#stay-in-touch)
+- [Contributing](#contributing)
+- [Plugins](#plugins)
+- [Different Versions of TestCafe](#different-versions-of-testcafe)
+- [Badge](#badge)
+- [Thanks to BrowserStack](#thanks-to-browserstack)
+- [License](#license)
+- [Creators](#creators)
 
 ## Features
 
