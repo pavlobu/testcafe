@@ -94,6 +94,7 @@
     "device-specs": "^1.0.0",
     "diff": "^4.0.2",
     "dotenv": "^16.0.0",
+    "dotenv-expand": "^8.0.3",
     "elegant-spinner": "^1.0.1",
     "emittery": "^0.4.1",
     "endpoint-utils": "^1.0.2",

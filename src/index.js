@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import fs from 'fs';
 import * as dotenv from 'dotenv';
+import { expand as dotenvExpand } from 'dotenv-expand';
 import { GeneralError } from './errors/runtime';
 import { RUNTIME_ERRORS } from './errors/types';
 import embeddingUtils from './embedding-utils';
@@ -10,7 +11,9 @@ import OPTION_NAMES from './configuration/option-names';
 import ProcessTitle from './services/process-title';
 import userVariables from './api/user-variables';
 
-dotenv.config();
+const env = dotenv.config();
+
+dotenvExpand(env);
 
 const lazyRequire   = require('import-lazy')(require);
 const TestCafe      = lazyRequire('./testcafe');

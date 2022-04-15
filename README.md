@@ -1,9 +1,18 @@
 ## pavlobu fork note:
 we need to update (rebase) this fork from time-to-time with latest master or stable release
 of testcafe
+
+### tag v1.18.5-custom-2
+added ability to use combined .env variables with dotenv-expand. Example:
+```
+INSTANCE=999
+TESTCAFE_CDPPORTS_FILE=cdpPorts-instance-${INSTANCE}.txt
+# TESTCAFE_CDPPORTS_FILE value will be: cdpPorts-instance-999.txt
+```
+
 ### tag v1.18.5-custom
 
-TestCafe is updated with logging cdpPort value to file.
+TestCafe is updated with logging cdpPort value to file. This is a --remote-debugging-port flag that is used for chrome browser.
 `TESTCAFE_CDPPORTS_LOG_TO_FILE_NEEDED=true` - is a variable that toggles cdpPort logging feature on and off.
 `TESTCAFE_CDPPORTS_FILE=cdpPorts.txt` - is an env variable with a file path to be used where cdp ports will be logged.
 Otherwise these ports values will be logged into `cdpPorts.txt` file.
@@ -54,6 +63,7 @@ Otherwise these ports values will be logged into `cdpPorts.txt` file.
 ## Table of contents
 
 - [pavlobu fork note:](#pavlobu-fork-note)
+  - [tag v1.18.5-custom-2](#tag-v1185-custom-2)
   - [tag v1.18.5-custom](#tag-v1185-custom)
 - [Table of contents](#table-of-contents)
 - [Features](#features)
