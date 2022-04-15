@@ -2,7 +2,7 @@
   "name": "testcafe",
   "description": "Automated browser testing for the modern web development stack.",
   "license": "MIT",
-  "version": "1.18.5",
+  "version": "1.18.5-custom",
   "author": {
     "name": "Developer Express Inc.",
     "url": "https://www.devexpress.com/"
@@ -93,6 +93,7 @@
     "del": "^3.0.0",
     "device-specs": "^1.0.0",
     "diff": "^4.0.2",
+    "dotenv": "^16.0.0",
     "elegant-spinner": "^1.0.1",
     "emittery": "^0.4.1",
     "endpoint-utils": "^1.0.2",
