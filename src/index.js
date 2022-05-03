@@ -1,3 +1,7 @@
+/* eslint-disable no-console */
+import fs from 'fs';
+import * as dotenv from 'dotenv';
+import { expand as dotenvExpand } from 'dotenv-expand';
 import { GeneralError } from './errors/runtime';
 import { RUNTIME_ERRORS } from './errors/types';
 import embeddingUtils from './embedding-utils';
@@ -6,6 +10,10 @@ import TestCafeConfiguration from './configuration/testcafe-configuration';
 import OPTION_NAMES from './configuration/option-names';
 import ProcessTitle from './services/process-title';
 import userVariables from './api/user-variables';
+
+const env = dotenv.config();
+
+dotenvExpand(env);
 
 const lazyRequire   = require('import-lazy')(require);
 const TestCafe      = lazyRequire('./testcafe');
@@ -73,6 +81,10 @@ async function getConfiguration (args) {
 
 // API
 async function createTestCafe (...args) {
+
+    if (process.env.TESTCAFE_CDPPORTS_LOG_TO_FILE_NEEDED === 'true')
+        fs.truncate(process.env.TESTCAFE_CDPPORTS_FILE || 'cdpPorts.txt', 0, () => {});
+
     process.title = ProcessTitle.main;
 
     const configuration = await getConfiguration(args);

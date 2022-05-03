@@ -1,3 +1,4 @@
+import fs from 'fs';
 import browserTools from 'testcafe-browser-tools';
 import { killBrowserProcess } from '../../../../../utils/process';
 import BrowserStarter from '../../../utils/browser-starter';
@@ -12,6 +13,13 @@ const LIST_TABS_TIMEOUT = 10000;
 const LIST_TABS_DELAY   = 500;
 
 export async function start (pageUrl, { browserName, config, cdpPort, tempProfileDir, inDocker }) {
+    if (process.env.TESTCAFE_CDPPORTS_LOG_TO_FILE_NEEDED === 'true') {
+        if (cdpPort && typeof cdpPort === 'number') {
+            fs.appendFile(process.env.TESTCAFE_CDPPORTS_FILE || 'cdpPorts.txt', String(cdpPort) + '\n', err => {
+                if (err) throw err;
+            });
+        }
+    }
     const chromeInfo           = await browserTools.getBrowserInfo(config.path || browserName);
     const chromeOpenParameters = Object.assign({}, chromeInfo);
 
