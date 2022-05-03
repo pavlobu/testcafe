@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.18.5-custom (2022-05-03)
+## v1.18.6-custom (2022-05-03)
 
 Updated with last stable release 
 ## v1.18.5-custom-2
