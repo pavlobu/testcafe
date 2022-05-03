@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.18.5-custom
+
+Updated with last stable release 
+## v1.18.5-custom-2
+
+Added ability to use combined .env variables with dotenv-expand. Example:
+```
+INSTANCE=999
+TESTCAFE_CDPPORTS_FILE=cdpPorts-instance-${INSTANCE}.txt
+# TESTCAFE_CDPPORTS_FILE value will be: cdpPorts-instance-999.txt
+```
+
+## v1.18.5-custom (2022-04-31)
+
+TestCafe is updated with logging cdpPort value to file. This is a --remote-debugging-port flag that is used for chrome browser.
+`TESTCAFE_CDPPORTS_LOG_TO_FILE_NEEDED=true` - is a variable that toggles cdpPort logging feature on and off.
+`TESTCAFE_CDPPORTS_FILE=cdpPorts.txt` - is an env variable with a file path to be used where cdp ports will be logged.
+Otherwise these ports values will be logged into `cdpPorts.txt` file.
+
 ## v1.18.6 (2022-04-18)
 
 ### Bug Fixes
