@@ -93,6 +93,8 @@
     "del": "^3.0.0",
     "device-specs": "^1.0.0",
     "diff": "^4.0.2",
+    "dotenv": "^16.0.0",
+    "dotenv-expand": "^8.0.3",
     "elegant-spinner": "^1.0.1",
     "email-validator": "^2.0.4",
     "emittery": "^0.4.1",

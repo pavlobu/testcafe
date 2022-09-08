@@ -1,3 +1,26 @@
+## pavlobu fork note:
+we need to update (rebase) this fork from time-to-time with latest master or stable release
+of testcafe.
+Look at CHANGELOG.md to see the changes. When updating custom gestcafe, don't forget to update CHANGELOG.md as well.
+
+## How to build a custom testcafe artifact
+To make a new release you need to package your work. You need to run the following commands
+1. (make sure dependencies are installed) npm install
+2. `npx gulp build` - builds testcafe
+3. `npm pack` - packages testcafe build to npm package .tar.gz file which can further be uploaded to github releases as an artifact.
+## How to release a custom testcafe artifact that includes the update of testcafe with changes made by this custom testcafe repo
+1. make sure you have an original testcafe repo as an "upstream"
+`git remote add upstream https://github.com/DevExpress/testcafe`
+2. then do `git fetch upstream`
+3. checkout a last stable release tag. E.g.: `git checkout v1.18.6`
+4. merge your last custom testcafe repo release tag to original test cafe tag. E.g. `git merge 1.18.5-custom-2`
+5. create a new tag v1.18.6-custom and push your changes to our custom test cafe repo
+6. in releases page on github create a new release select a release tag `v1.18.6-custom` and upload a custom testcafe artifact there. Then click `publish release` and release with artifact will be published
+
+---
+---
+---
+
 <p align="center">
   <a href="https://testcafe.io/surveys/open-source-feedback-2022">
     <img src="https://raw.github.com/DevExpress/testcafe/master/media/2022-feedback-survey-banner.png" alt="2022 TestCafe Feedback Survey" />
@@ -39,19 +62,28 @@
 
 ## Table of contents
 
-* [Features](#features)
-* [TestCafe Studio: IDE for End-to-End Web Testing](#testcafe-studio-ide-for-end-to-end-web-testing)
-* [Getting Started](#getting-started)
-* [Documentation](#documentation)
-* [Get Help](#get-help)
-* [Issue Tracker](#issue-tracker)
-* [Stay in Touch](#stay-in-touch)
-* [Contributing](#contributing)
-* [Plugins](#plugins)
-* [Different Versions of TestCafe](#different-versions-of-testcafe)
-* [Badge](#badge)
-* [License](#license)
-* [Creators](#creators)
+- [pavlobu fork note:](#pavlobu-fork-note)
+- [How to build a custom testcafe artifact](#how-to-build-a-custom-testcafe-artifact)
+- [How to release a custom testcafe artifact that includes the update of testcafe with changes made by this custom testcafe repo](#how-to-release-a-custom-testcafe-artifact-that-includes-the-update-of-testcafe-with-changes-made-by-this-custom-testcafe-repo)
+- [Table of contents](#table-of-contents)
+- [Features](#features)
+- [TestCafe Studio: IDE for End-to-End Web Testing](#testcafe-studio-ide-for-end-to-end-web-testing)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Creating the Test](#creating-the-test)
+  - [Running the Test](#running-the-test)
+  - [Viewing the Results](#viewing-the-results)
+- [Documentation](#documentation)
+- [Get Help](#get-help)
+- [Issue Tracker](#issue-tracker)
+- [Stay in Touch](#stay-in-touch)
+- [Contributing](#contributing)
+- [Plugins](#plugins)
+- [Different Versions of TestCafe](#different-versions-of-testcafe)
+- [Badge](#badge)
+- [Thanks to BrowserStack](#thanks-to-browserstack)
+- [License](#license)
+- [Creators](#creators)
 
 ## Features
 
