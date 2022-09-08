@@ -11,10 +11,11 @@ To make a new release you need to package your work. You need to run the followi
 ## How to release a custom testcafe artifact that includes the update of testcafe with changes made by this custom testcafe repo
 1. make sure you have an original testcafe repo as an "upstream"
 `git remote add upstream https://github.com/DevExpress/testcafe`
-2. checkout a last stable release tag. E.g.: `git checkout v1.18.6`
-3. merge your last custom testcafe repo release tag to original test cafe tag. E.g. `git merge 1.18.5-custom-2`
-4. create a new tag v1.18.6-custom and push your changes to our custom test cafe repo
-5. in releases page on github create a new release select a release tag `v1.18.6-custom` and upload a custom testcafe artifact there. Then click `publish release` and release with artifact will be published  
+2. then do `git fetch upstream`
+3. checkout a last stable release tag. E.g.: `git checkout v1.18.6`
+4. merge your last custom testcafe repo release tag to original test cafe tag. E.g. `git merge 1.18.5-custom-2`
+5. create a new tag v1.18.6-custom and push your changes to our custom test cafe repo
+6. in releases page on github create a new release select a release tag `v1.18.6-custom` and upload a custom testcafe artifact there. Then click `publish release` and release with artifact will be published
 
 ---
 ---
