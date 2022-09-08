@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.0-custom (2022-09-08)
+
+Updated to latest testcafe stable release
+
 ## v2.0 (2022-08-31)
 
 ### TypeScript update
